@@ -55,7 +55,7 @@ output_file = Path("Desktop","Data Analytics Boot Camp","3.0 Python","python-cha
 
 with open(output_file,"w") as file:
     
-# Write methods to print to Financial_Analysis_Summary 
+# Write Financial_Analysis.txt 
     file.write("Financial Analysis")
     file.write("\n")
     file.write("--------------------------------------------------")
