@@ -3,7 +3,7 @@ import os
 import csv
 
 # File location
-input_file = Path("Desktop","Data Analytics Boot Camp","3.0 Python","python-challenge", "PyBank", "budget_data.csv")
+input_file = os.path.join('Desktop','Data Analytics Boot Camp','3.0 Python','python-challenge', 'PyBank', 'budget_data.csv')
 
 # Create empty lists
 total_months = []
@@ -13,7 +13,7 @@ monthly_profit_change = []
 # Open csv
 with open(input_file,newline="", encoding="utf-8") as budget:
 
-    # Store the contents of budget_data.csv in the variable csvreader
+    # Split the data on commas
     csvreader = csv.reader(budget,delimiter=",") 
 
     # Next the header labels
@@ -50,11 +50,11 @@ print(f"Greatest Increase in Profits: {total_months[max_increase_month]} (${str(
 print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${str(max_decrease_value)})")
 
 # Output file
-output_file = Path("Desktop","Data Analytics Boot Camp","3.0 Python","python-challenge", "PyBank", "Financial_Analysis.txt")
+output_file = os.path.join('Desktop','Data Analytics Boot Camp','3.0 Python','python-challenge', 'PyBank', 'Financial_Analysis.txt')
 
 with open(output_file,"w") as file:
     
-# Write Financial_Analysis.txt 
+    # Write Financial_Analysis.txt 
     file.write("Financial Analysis")
     file.write("\n")
     file.write("--------------------------------------------------")
